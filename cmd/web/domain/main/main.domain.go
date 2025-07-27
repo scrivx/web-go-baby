@@ -10,8 +10,8 @@ import (
 func MainView(w http.ResponseWriter, r *http.Request) {
 	utils.CheckIfPath(w, r, models.RoutesInstance.MAIN)
 	files := []string{
-		"iu/html/base.html",
-		"iu/html/pages/main/main.html",
+		"ui/html/base.html",
+		"ui/html/pages/main/main.html",
 	}
 	
 	utils.ParseTemplateFiles(w, "base", utils.EmplyStruct, utils.EmplyFuncMap, files...)
