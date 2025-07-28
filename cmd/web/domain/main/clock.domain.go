@@ -5,6 +5,7 @@ import (
 
 	"github.com/scrivx/go-api-web/internal/models"
 	"github.com/scrivx/go-api-web/internal/utils"
+	"github.com/scrivx/go-api-web/ui"
 )
 
 var duration = 14400
@@ -21,7 +22,7 @@ func GetDuration() int {
 
 func ClockFragment(w http.ResponseWriter, r *http.Request) {
 	utils.CheckIfPath(w, r, models.RoutesInstance.CLOCK)
-	utils.ParseTemplateFiles(w, "clock", clockInstance, utils.EmplyFuncMap, "ui/html/pages/main/clock.html")
+	utils.ParseTemplateFiles(w, "clock", clockInstance, utils.EmplyFuncMap, ui.Content, "html/pages/main/clock.html")
 }
 
 func RestartCycle(w http.ResponseWriter, r *http.Request) {
